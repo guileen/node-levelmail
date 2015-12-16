@@ -1,0 +1,31 @@
+{
+  "name": "levelmail",
+  "version": "1.0.0",
+  "description": "Mail server upon leveldb",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guileen/node-levelmail.git"
+  },
+  "keywords": [
+    "mail",
+    "server",
+    "smtp"
+  ],
+  "author": "guileen@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guileen/node-levelmail/issues"
+  },
+  "homepage": "https://github.com/guileen/node-levelmail#readme",
+  "dependencies": {
+    "async": "^1.5.0",
+    "cclog": "^0.4.1",
+    "leveldown": "^1.4.3",
+    "raw-body": "^2.1.5",
+    "smtp-protocol": "^2.4.6"
+  }
+}
