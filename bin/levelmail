@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+require('master').daemon({
+    stdout: process.env.LOG_FILE || 'levelmail.log',
+    stderr: process.env.ERROR_LOG || process.env.LOG_FILE || 'levelmail.log',
+    worker: function() {
+        require('../server')
+        require('./www')
+    }
+})

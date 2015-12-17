@@ -25,8 +25,11 @@ var server = smtp.createServer(function (req) {
         })
 })
 
-server.listen(9025)
+var smtpPort = parseInt(process.env.SMTP_PORT) || 9025
+server.listen(smtpPort)
+console.log('SMTP listen at:', smtpPort)
 
+/*
 var smtp = require('smtp-protocol');
 var fs = require('fs');
 
@@ -46,3 +49,4 @@ smtp.connect('localhost', 9025, function (mail) {
                 console.log('account', result)
         })
 });
+*/
