@@ -1,9 +1,24 @@
 #!/usr/bin/env node
-require('master').daemon({
-    stdout: process.env.LOG_FILE || 'levelmail.log',
-    stderr: process.env.ERROR_LOG || process.env.LOG_FILE || 'levelmail.log',
-    worker: function() {
-        require('../server')
-        require('./www')
-    }
-})
+
+var program = require('commander')
+program
+  .version('0.0.1')
+  .option('-d --daemon')
+  .parse(process.argv)
+  ;
+
+if(program.daemon) {
+    require('master').daemon({
+            stdout: process.env.LOG_FILE || 'levelmail.log',
+            stderr: process.env.ERROR_LOG || process.env.LOG_FILE || 'levelmail.log',
+            worker: run
+    })
+} else {
+    run()
+}
+
+function run() {
+    require('../server')
+    require('./www')
+}
+
