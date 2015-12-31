@@ -32,3 +32,14 @@ Now, you can send mail to anyaccount@myvps.xx from any other mail service.
 
 Refreash "http://myvps.xx:3000/", you received the mail.
 
+# LDB API
+
+```
+curl -d 'key=foo&value=helloworld' 'localhost:3000/put?key=foo'
+curl 'localhost:3000/get?key=foo'
+curl 'localhost:3000/ldb/get?key=foo&type=base64'
+cat /path/to/test.png | curl --data-binary @- 'localhost:3000/ldb/put?key=test.png'
+curl 'localhost:3000/ldb/get?key=test.png&type=png'
+cat /path/to/test.png | curl --data-binary @- 'localhost:3000/ldb/put?key=test.png&type=png'
+curl 'localhost:3000/ldb/get?key=test.png&type=plain'
+```
