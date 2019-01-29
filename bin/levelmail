@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+var path = require('path')
+process.env.LEVELDB_PATH = process.env.LEVELDB_PATH || path.normalize(__dirname + '/../data')
+
 var program = require('commander')
 program
   .version('0.0.1')

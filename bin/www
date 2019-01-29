@@ -4,6 +4,10 @@
  * Module dependencies.
  */
 
+var path = require('path')
+process.env.LEVELDB_PATH = process.env.LEVELDB_PATH || path.normalize(__dirname + '/../data')
+console.log(process.env.LEVELDB_PATH)
+
 var app = require('../webapp');
 var debug = require('debug')('web:server');
 var http = require('http');

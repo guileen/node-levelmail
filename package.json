@@ -28,19 +28,19 @@
   "homepage": "https://github.com/guileen/node-levelmail#readme",
   "dependencies": {
     "async": "^1.5.0",
-    "body-parser": "~1.13.2",
+    "body-parser": "^1.18.3",
     "cclog": "^0.4.1",
     "commander": "^2.9.0",
     "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "express": "~4.13.1",
-    "hbs": "~3.1.0",
-    "leveldown": "^1.4.3",
-    "levelup": "^1.3.1",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "leveldown": "^4.0.1",
+    "levelup": "^4.0.0",
     "master": "^1.0.0",
-    "morgan": "~1.6.1",
+    "morgan": "^1.9.1",
     "raw-body": "^2.1.5",
-    "serve-favicon": "~2.3.0",
+    "serve-favicon": "^2.5.0",
     "smtp-protocol": "^2.4.6"
   }
 }
